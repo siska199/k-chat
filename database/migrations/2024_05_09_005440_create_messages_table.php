@@ -21,12 +21,12 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        Schema::create('groups', function (Blueprint $table) {
+        Schema::table('groups', function (Blueprint $table) {
             $table->foreignId('last_message_id')->nullable()->constrained('messages');
         });
 
-        Schema::create('conversations', function (Blueprint $table) {
-            $table->foreignId('last_message_id')->nullable()->constrained('conversations');
+        Schema::table('conversations', function (Blueprint $table) {
+            $table->foreignId('last_message_id')->nullable()->constrained('messages');
         });
     }
 
@@ -35,6 +35,17 @@ return new class extends Migration
      */
     public function down(): void
     {
+        Schema::table('groups', function (Blueprint $table) {
+            // Drop the last_message_id column if it exists
+            $table->dropForeign(['last_message_id']);
+            $table->dropColumn('last_message_id');
+        });
+
+        Schema::table('conversations', function (Blueprint $table) {
+            // Drop the last_message_id column if it exists
+            $table->dropForeign(['last_message_id']);
+            $table->dropColumn('last_message_id');
+        });
         Schema::dropIfExists('messages');
     }
 };
