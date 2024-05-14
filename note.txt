@@ -1,0 +1,1 @@
+- Gunakan persistent layout to prevent unnecessary rerendering

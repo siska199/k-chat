@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* Global Style */
+
+@layer base {
+    *{
+        @apply m-0 p-0 box-border;
+    }
+    html{
+        @apply scroll-smooth;
+    }
+    body{
+        @apply overflow-x-hidden max-w-[100vw] text-body-base bg-white text-gray-800;
+    }
+    h1{
+        @apply text-heading-01;
+    }
+    h2{
+        @apply text-heading-02;
+    }
+    h3{
+        @apply text-heading-03;
+    }
+    h4{
+        @apply text-heading-04;
+    }
+    h5{
+        @apply text-heading-05;
+    }
+    p{
+        @apply text-body-base;
+    }
+
+
+}

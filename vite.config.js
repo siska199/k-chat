@@ -10,4 +10,7 @@ export default defineConfig({
         }),
         react(),
     ],
+      //other codes
+    define: {
+    },
 });
