@@ -1,15 +1,12 @@
-import Container from '@/Components/Uis/Container'
+import ContainerFlex from '@/components/ui/Container';
 
+type Props = {}
 
-const Home = () => {
-  
-  
+const Home = (props: Props) => {
   return (
-    <div>
-      <Container className='border border-primary-900'>
-        SISKA
-      </Container>
-    </div>
+    <ContainerFlex>
+      SISKA AP
+    </ContainerFlex>
   )
 }
 

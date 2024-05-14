@@ -40,7 +40,7 @@ const containerFlexVariants = cva(
       }
     },
     defaultVariants : {
-      variant : 'hsc',
+      variant : 'vss',
       gap     : 'sm',
       padding :'sm'
     }
@@ -54,7 +54,7 @@ interface TProps extends React.HTMLProps<HTMLDivElement>, VariantProps<typeof co
 }
 
 
-const ContainerFlex : React.FC<TProps> = (props) => {
+const Container : React.FC<TProps> = (props) => {
   const {children, className, variant, gap, padding,   customElement, ...attrs} = props
   const Component  = customElement ?? 'div'  as React.ElementType
 
@@ -67,4 +67,4 @@ const ContainerFlex : React.FC<TProps> = (props) => {
 
 
 
-export default ContainerFlex
+export default Container
