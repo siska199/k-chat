@@ -1,9 +1,9 @@
 import { User } from '@/types';
 import { PropsWithChildren, ReactNode } from 'react';
 
-type TAuthenticated =  PropsWithChildren<{ user: User, header?: ReactNode }>
+type TProtectedLayout =  PropsWithChildren<{ user: User, header?: ReactNode }>
 
-const Authenticated = (props:TAuthenticated )=> {
+const ProtectedLayout = (props:TProtectedLayout )=> {
     const { user, header, children } = props
 
     return (
@@ -13,6 +13,6 @@ const Authenticated = (props:TAuthenticated )=> {
     );
 }
 
-export default Authenticated
+export default ProtectedLayout
 
 
