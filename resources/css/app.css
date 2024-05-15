@@ -36,3 +36,33 @@
 
 
 }
+
+
+@layer utilities {
+
+    /* Create bounce effect while click component */
+    .bounce-effect {
+        @apply transition-all duration-[50] hover:scale-[1.03] active:scale-[0.98] disabled:!scale-[1] disabled:cursor-not-allowed
+    }
+
+    .cursor-pointer-custome{
+       @apply bounce-effect cursor-pointer
+    }
+
+    /* FOR SVG ICON set color dinamically */
+    .icon-white path { stroke: white; }
+    .icon-grey path { stroke: #E2E8F0; }
+    .icon-red path { stroke: rgb(148, 53, 53); }
+    .icon-yellow path { stroke: rgb(218, 171, 84); }
+    .icon-green path { stroke: rgb(99, 145, 62); }
+
+    /* Customize scrollbar */
+    
+    .scrollbar-hidden::-webkit-scrollbar {
+        display: none;
+      }
+    .scrollbar-hidden {
+        -ms-overflow-style: none;
+        scrollbar-width: none; /* Firefox */
+    }
+  }

@@ -1,11 +1,10 @@
+import { cn } from '@/lib/utils';
 import { VariantProps, cva } from 'class-variance-authority';
 import React from 'react';
-import twConfig from '../../../css/tailwind-config-helper';
-import { cn } from '@/lib/utils';
 
 
 const containerFlexVariants = cva(
-  'flex flex-wrap',
+  'flex ',
   {
     variants : {
       variant : {
@@ -30,23 +29,37 @@ const containerFlexVariants = cva(
         ves : 'flex-col items-end justify-start',
         vec : 'flex-col items-end justify-center',
         vee : 'flex-col items-end justify-end',
-        page : 'flex justify-start items-start min-h-screen'        
       },
       fit : {
         "true" : "w-fit",
         "false" : "w-full"
       },
-
       gap : {
-        ...twConfig.gap
+        'small'   : "gap-2",
+        'base'    : "gap-4",
+        'medium'  : "gap-6",
+        'large'   : "gap-8",
+        'x-large' : "gap-16"     
       },
+
       padding : {
-        ...twConfig.padding
+        'small'   : "p-2",
+        'base'    : "p-4",
+        'medium'  : "p-6",
+        'large'   : "p-8",
+        'x-large' : "p-16"         
+  
+      },
+      typeComp : {
+        'page' : 'min-h-screen',
+        'card' : 'p-4'
       }
     },
+    compoundVariants : [ 
+    ],
     defaultVariants : {
       variant : 'vss',
-      fit : false
+      fit     : false,
     }
   }
 )
@@ -59,11 +72,10 @@ interface TProps extends React.HTMLProps<HTMLDivElement>, VariantProps<typeof co
 
 
 const Container : React.FC<TProps> = (props) => {
-  const {children, className, variant,gap, fit, padding,   customElement, ...attrs} = props
+  const {children, className, variant,gap, fit, padding,  typeComp , customElement, ...attrs} = props
   const Component  = customElement ?? 'div'  as React.ElementType
-
   return (
-    <Component className={cn(containerFlexVariants({ className,variant, gap, fit, padding,}))} {...attrs}>
+    <Component className={cn(containerFlexVariants({ className,variant, gap, fit, padding,typeComp}))} {...attrs}>
       {children}
     </Component>
   )

@@ -1,13 +1,22 @@
 import resolveConfig from 'tailwindcss/resolveConfig'
 import tailwindConfig from '../../tailwind.config.js'
+import { deepCopy } from '../js/lib/utils';
 
 
 const fullConfig = resolveConfig(tailwindConfig)
 
 const twConfig = {
-    gap     : fullConfig.theme.gap,
-    padding : fullConfig.theme.padding
+    gap     : deepCopy(fullConfig.theme.spacing),
+    padding : deepCopy(fullConfig.theme.spacing),
 }
+
+
+Object.entries(fullConfig.theme.spacing)?.map(([key,value])=>{
+    const keyUpdate = key as keyof typeof fullConfig.theme.spacing 
+    twConfig.gap[keyUpdate] = `gap-${key}`
+    twConfig.padding[keyUpdate] = `p-${key}`
+})
+
 
 
 

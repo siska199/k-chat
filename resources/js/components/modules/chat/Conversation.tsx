@@ -1,10 +1,13 @@
+import Container from '@/components/ui/Container'
 import React from 'react'
 
 type Props = {}
 
 const Conversation = (props: Props) => {
   return (
-    <div>Conversation</div>
+    <Container typeComp={"card"} className='h-full'>
+      Conversation
+    </Container>
   )
 }
 

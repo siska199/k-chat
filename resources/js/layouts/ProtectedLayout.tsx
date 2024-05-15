@@ -9,9 +9,9 @@ const ProtectedLayout = (props:TProtectedLayout )=> {
     const {  children } = props
 
     return (
-        <Container className="min-h-screen bg-gray-100 border-2 flex-nowrap" variant={"hss"}>
-            <Sidebar className=''/>
-            <Container className='flex-grow min-h-screen' customElement={"main"}>{children}</Container>
+        <Container className="min-h-screen h-screen " variant={"hss"}>
+            <Sidebar/>
+            <Container className='flex-grow h-full' customElement={"main"}>{children}</Container>
         </Container>
     );
 }
