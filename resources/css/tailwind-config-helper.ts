@@ -9,4 +9,7 @@ const twConfig = {
     padding : fullConfig.theme.padding
 }
 
+
+
+console.log('twConfig: ', twConfig)
 export default twConfig

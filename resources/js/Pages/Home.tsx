@@ -1,13 +1,18 @@
-import ContainerFlex from '@/components/ui/Container';
+import Container from '@/components/ui/Container';
+import ProtectedLayout from '@/layouts/ProtectedLayout';
 
 type Props = {}
 
 const Home = (props: Props) => {
   return (
-    <ContainerFlex>
+    <Container variant={"page"}>
       SISKA AP
-    </ContainerFlex>
+    </Container>
   )
+}
+
+Home.layout = (page:React.ReactNode)=>{
+  return <ProtectedLayout>{page}</ProtectedLayout>
 }
 
 export default Home

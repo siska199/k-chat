@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils';
 
 
 const containerFlexVariants = cva(
-  'flex flex-wrap w-full',
+  'flex flex-wrap',
   {
     variants : {
       variant : {
@@ -30,8 +30,13 @@ const containerFlexVariants = cva(
         ves : 'flex-col items-end justify-start',
         vec : 'flex-col items-end justify-center',
         vee : 'flex-col items-end justify-end',
-        
+        page : 'flex justify-start items-start min-h-screen'        
       },
+      fit : {
+        "true" : "w-fit",
+        "false" : "w-full"
+      },
+
       gap : {
         ...twConfig.gap
       },
@@ -41,8 +46,7 @@ const containerFlexVariants = cva(
     },
     defaultVariants : {
       variant : 'vss',
-      gap     : 'sm',
-      padding :'sm'
+      fit : false
     }
   }
 )
@@ -55,11 +59,11 @@ interface TProps extends React.HTMLProps<HTMLDivElement>, VariantProps<typeof co
 
 
 const Container : React.FC<TProps> = (props) => {
-  const {children, className, variant, gap, padding,   customElement, ...attrs} = props
+  const {children, className, variant,gap, fit, padding,   customElement, ...attrs} = props
   const Component  = customElement ?? 'div'  as React.ElementType
 
   return (
-    <Component className={cn(containerFlexVariants({ className,variant, gap, padding,}))} {...attrs}>
+    <Component className={cn(containerFlexVariants({ className,variant, gap, fit, padding,}))} {...attrs}>
       {children}
     </Component>
   )

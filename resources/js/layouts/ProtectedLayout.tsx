@@ -1,15 +1,18 @@
-import { User } from '@/types';
-import { PropsWithChildren, ReactNode } from 'react';
+import Container from '@/components/ui/Container';
+import Sidebar from '@/components/ui/Sidebar';
 
-type TProtectedLayout =  PropsWithChildren<{ user: User, header?: ReactNode }>
+type TProtectedLayout =  {
+    children : React.ReactNode
+}
 
 const ProtectedLayout = (props:TProtectedLayout )=> {
-    const { user, header, children } = props
+    const {  children } = props
 
     return (
-        <div className="min-h-screen bg-gray-100">
-            <main>{children}</main>
-        </div>
+        <Container className="min-h-screen bg-gray-100 border-2 flex-nowrap" variant={"hss"}>
+            <Sidebar className=''/>
+            <Container className='flex-grow min-h-screen' customElement={"main"}>{children}</Container>
+        </Container>
     );
 }
 
