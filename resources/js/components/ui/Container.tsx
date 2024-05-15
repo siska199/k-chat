@@ -4,7 +4,7 @@ import React from 'react';
 
 
 const containerFlexVariants = cva(
-  'flex ',
+  'flex w-full',
   {
     variants : {
       variant : {
@@ -43,15 +43,15 @@ const containerFlexVariants = cva(
       },
 
       padding : {
-        'small'   : "p-2",
-        'base'    : "p-4",
-        'medium'  : "p-6",
-        'large'   : "p-8",
-        'x-large' : "p-16"         
+        'small'   : "p-2 w-[calc(100%-0.50rem)]",
+        'base'    : "p-4 w-[calc(100%-1rem)]",
+        'medium'  : "p-6 w-[calc(100%-1.5rem)]",
+        'large'   : "p-8 w-[calc(100%-2rem)]",
+        'x-large' : "p-16 w-[calc(100%-4rem)]"         
   
       },
       typeComp : {
-        'page' : 'min-h-screen',
+        'page' : 'min-h-screen ',
         'card' : 'p-4'
       }
     },

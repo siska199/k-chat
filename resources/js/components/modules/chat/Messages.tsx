@@ -6,7 +6,7 @@ import AllMessage from './partials/AllMessage'
 
 const Messages = () => {
   return (
-   <Container typeComp={"card"} fit gap={"medium"} className=' max-w-[21rem] w-[21rem] h-full hidden md:flex border-r'>
+   <Container  fit gap={"medium"} className=' max-w-[21rem] w-[21rem] h-full hidden md:flex border-r'>
       <HeaderMessages/>
       <OnlineFiends/>
       <PinnedMessages/>

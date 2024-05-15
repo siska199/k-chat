@@ -10,5 +10,6 @@ export { default as IconSetting } from '../../../assets/icons/setting.svg?react'
 export { default as IconSearch } from '../../../assets/icons/search.svg?react';
 export { default as IconEdit } from '../../../assets/icons/edit.svg?react';
 export { default as IconPin } from '../../../assets/icons/pin.svg?react';
+export { default as IconDoubleCheck } from '../../../assets/icons/double-check.svg?react';
 
 

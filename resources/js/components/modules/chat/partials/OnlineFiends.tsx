@@ -6,7 +6,7 @@ const OnlineFiends = () => {
 
   }
   return (
-    <Container gap={"base"}>
+    <Container gap={"base"} typeComp={"card"}>
       <Container variant={"hbc"}>
         <p className='text-gray'>Online Now</p>
         <p className='text-gray text-body-small cursor-pointer-custome'>See All</p>
