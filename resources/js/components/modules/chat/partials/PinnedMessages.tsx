@@ -8,7 +8,7 @@ const PinnedMessages = (props: TProps) => {
   return (
     <Container gap={"base"}>
       <Container className='px-4' variant={"hsc"} gap={'small'}>
-        <IconPin/>
+        <IconPin className=''/>
         <p className='text-gray'>Pinned Message</p>
       </Container>
       <Container customElement='ul'  className='pl-4 overflow-x-hidden max-h-[10rem] ' gap={"base"} >

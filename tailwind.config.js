@@ -55,7 +55,7 @@ export default {
                 '700':'#334155',
                 '800':'#1E293B',
                 '900':'#0F172A',
-                DEFAULT : '#CBD5E1'
+                DEFAULT : '#94A3B8'
             },
             primary : {
                 DEFAULT :'#4235FF' ,
