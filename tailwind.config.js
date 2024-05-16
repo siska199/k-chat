@@ -43,7 +43,7 @@ export default {
         colors : {
             black : '#000000',
             white : '#FFFFFF',
-
+            "broken-white" : '#F8F8FC',
             gray: {
                 '50' :'#F8FAFC',
                 '100':'#F1F5F9',
@@ -80,7 +80,8 @@ export default {
                 '600':'#16A34A',
                 '700':'#15803D',
                 '800':'#166534',
-                '900':'#14532D'
+                '900':'#14532D',
+                DEFAULT : '#22C55E'
             },
             warning:{
                 '50' :'#FFFBEB',

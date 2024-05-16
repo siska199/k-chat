@@ -11,10 +11,10 @@ const AllMessage = (props: Props) => {
         <IconMessageFill className='w-[1.2rem]'/>
         <p className='text-gray'>All Message</p>
       </Container>
-      <Container customElement='ul'  className='pl-4 overflow-x-hidden max-h-[10rem] ' gap={"base"} >
+      <Container customElement='ul'  className=' overflow-x-hidden max-h-[10rem] ' >
         {
-          listPinnedMessage?.map((data,i)=>
-            <CardMessage key={i} {...data} className={" max-w-[calc(100%-1rem)]"}/>
+          listMessage?.map((data,i)=>
+            <CardMessage key={i} {...data} className={" p-4"}/>
           )
         }
       </Container>
@@ -35,7 +35,7 @@ export type TMessage= {
   isSelected        : boolean;
 }
 
-const listPinnedMessage : TMessage[] = [...Array(10)]?.map((_,i)=>({
+const listMessage : TMessage[] = [...Array(10)]?.map((_,i)=>({
   id                  : `${i}`,
   image               : 'https://i.pinimg.com/736x/ae/ef/5d/aeef5db2d48858931f597cccb591241d.jpg',
   latestMessage       :  `Latest message ${i}`,
@@ -44,7 +44,7 @@ const listPinnedMessage : TMessage[] = [...Array(10)]?.map((_,i)=>({
   isRead              : true,
   totalUnreadMessage  : 0,
   isTyping            : true, 
-  isSelected          : true,
+  isSelected          : i===0? true:false,
 }))
 
 export default AllMessage

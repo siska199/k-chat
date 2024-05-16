@@ -12,5 +12,6 @@ export { default as IconEdit } from '../../../assets/icons/edit.svg?react';
 export { default as IconPin } from '../../../assets/icons/pin.svg?react';
 export { default as IconDoubleCheck } from '../../../assets/icons/double-check.svg?react';
 export { default as IconMessageFill } from '../../../assets/icons/message-fill.svg?react';
+export { default as IconThreeDotsVertical } from '../../../assets/icons/three-dots-vertical.svg?react';
 
 

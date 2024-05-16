@@ -1,15 +1,14 @@
 import { cn } from '@/lib/utils';
 import { VariantProps, cva } from 'class-variance-authority';
 import clsx from 'clsx';
-import React from 'react'
 
 const containerFlexVariants = cva(
   'flex flex-wrap rounded-full',
   {
     variants : {
       variant : {
-        "large"   : 'min-w-[3.5rem] h-[3.5rem]',
-        "medium"  : 'min-w-[2.75rem] h-[2.75rem]',
+        "large"   : 'min-w-[4rem] h-[4rem]',
+        "medium"  : 'min-w-[3.5rem] h-[3.5rem]',
         "base"    : 'min-w-[3rem] h-[3rem]',
         'small'   : 'min-w-[1.5rem] h-[1.5rem]'
       },

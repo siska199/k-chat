@@ -18,16 +18,20 @@ export type TPropsCardMessage = {
 }
 
 const CardMessage = (props: TPropsCardMessage) => {
-  const {id, name, image,latestMessage,latestMessageDate, className, isRead, isTyping} = props
+  const {id, name,isSelected, image,latestMessage,latestMessageDate, className, isRead, isTyping} = props
   return (
-    <Container variant={"hbs"} className={`${className} cursor-pointer-custome`}>
+    <Container variant={"hbs"} className={clsx({
+      "hover:bg-broken-white cursor-pointer-custome" : true,
+      [className || ""] : className,
+      "bg-broken-white" : isSelected
+    })}>
       <Container variant={"hss"} gap={"small"}>
         <Avatar src={image} alt={"User"}/>
         <Container variant={"vsc"}>
           <p className='text-body-medium font-medium'>{name}</p>
           {
             isTyping ? 
-            <p className='italic text-success-400'>{name} is Typing...</p>
+            <p className='italic text-success'>{name} is Typing...</p>
             :
             <p className='text-gray-400'>{latestMessage}</p>
           }
