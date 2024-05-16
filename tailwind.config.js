@@ -143,10 +143,13 @@ export default {
         },
         borderColor: {
             DEFAULT: '#E2E8F0',
+            input : '#D6D6D6',
+            primary : '#4235FF'
         },
         borderWidth: {
             DEFAULT: '1px',
         },
+
     },
 
     plugins: [forms],

@@ -6,7 +6,7 @@ type TProps = {}
 
 const GroupConversationByDate = (props: TProps) => {
   return (
-    <Container padding={"large"} className="mx-auto">
+    <Container padding={"large"} className="mx-auto" gap={"base"}>
         <HorizontalLineText text={"Today"} width="5rem"/>
         {
             conversationByDate.listMessage?.map((data,i)=>

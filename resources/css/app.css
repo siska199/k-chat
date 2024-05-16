@@ -50,8 +50,10 @@
     }
 
     /* FOR SVG ICON set color dinamically */
-    .icon-white path { stroke: white; }
-    .icon-grey path { stroke: #E2E8F0; }
+    .icon-white path { stroke: white;  }
+    .icon-white-fill path { fill: white;  }
+
+    .icon-grey path { stroke: #94A3B8; }
     .icon-red path { stroke: rgb(148, 53, 53); }
     .icon-yellow path { stroke: rgb(218, 171, 84); }
     .icon-green path { stroke: rgb(99, 145, 62); }

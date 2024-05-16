@@ -40,8 +40,8 @@ const listPinnedMessage : TMessage[] = [...Array(10)]?.map((_,i)=>({
   latestMessage       :  `Latest message ${i}`,
   latestMessageDate   :  '2023-09-24 10:10:49',
   name                : `name ${i}`,
-  isRead              : true,
-  totalUnreadMessage  : 0,
+  isRead              : false,
+  totalUnreadMessage  : 10,
   isTyping            : true, 
   isSelected          : false,
 }))

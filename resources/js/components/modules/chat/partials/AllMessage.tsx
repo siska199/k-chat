@@ -6,12 +6,12 @@ type Props = {}
 
 const AllMessage = (props: Props) => {
   return (
-    <Container gap={"base"}>
+    <Container gap={"base"} className=" flex-grow ">
       <Container className='px-4' variant={"hsc"} gap={'small'}>
         <IconMessageFill className='w-[1.2rem]'/>
         <p className='text-gray'>All Message</p>
       </Container>
-      <Container customElement='ul'  className=' overflow-x-hidden max-h-[10rem] ' >
+      <Container customElement='ul'  className='max-h-[20rem] overflow-x-hidden  ' >
         {
           listMessage?.map((data,i)=>
             <CardMessage key={i} {...data} className={" p-4"}/>

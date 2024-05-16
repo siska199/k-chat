@@ -18,7 +18,7 @@ export type TPropsCardMessage = {
 }
 
 const CardMessage = (props: TPropsCardMessage) => {
-  const {id, name,isSelected, image,latestMessage,latestMessageDate, className, isRead, isTyping} = props
+  const {id, name,isSelected, image,latestMessage,latestMessageDate, totalUnreadMessage,className, isRead, isTyping} = props
   return (
     <Container variant={"hbs"} className={clsx({
       "hover:bg-broken-white cursor-pointer-custome" : true,
@@ -41,7 +41,9 @@ const CardMessage = (props: TPropsCardMessage) => {
             'text-body-base' : true
           })}>07.45 AM</p>
           {
-            isRead && <IconDoubleCheck className='w-[1.1rem] h-[1.1rem]'/>
+            isRead?
+            <IconDoubleCheck className='w-[1.1rem] h-[1.1rem]'/>
+            : <div className='flex items-center justify-center rounded-full bg-error-500 p-1 text-body-small text-white min-w-[0.75rem] min-h-[0.75rem] aspect-square'>{totalUnreadMessage}</div>
           }
         </Container>
       </Container>
