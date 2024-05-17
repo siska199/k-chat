@@ -15,6 +15,9 @@ Route::group([
     // 'middleware'=>['auth', 'verified']
 ],function(){
     Route::get('/',[HomeController::class,'home'])->name('home');
+    Route::get('/login-test', function () {
+        return inertia('LoginTest'); 
+    })->name('login');
 });
 
 //AUTH ROUTE

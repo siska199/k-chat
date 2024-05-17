@@ -82,6 +82,14 @@
 
 @layer utilities {
 
+    /* Input */
+    .container-input{
+        @apply bg-white flex flex-nowrap items-center gap-2 text-body-small border  overflow-hidden rounded-lg focus-within:!border-primary   w-full px-3 py-2
+    }
+    .input{
+        @apply flex-grow !outline-none !border-none focus:border-none focus:ring-0 p-0 text-body-base placeholder:text-gray-300
+    }
+
     /* Create bounce effect while click component */
     .bounce-effect {
         @apply transition-all duration-[50] hover:scale-[1.03] active:scale-[0.98] disabled:!scale-[1] disabled:cursor-not-allowed

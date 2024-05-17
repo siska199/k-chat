@@ -1,19 +1,10 @@
-import ApplicationLogo from '@/Components/ApplicationLogo';
-import { Link } from '@inertiajs/react';
+import Container from '@/components/ui/Container';
 import { PropsWithChildren } from 'react';
 
-export default function Guest({ children }: PropsWithChildren) {
+export default function NonProtectedLayout({ children }: PropsWithChildren) {
     return (
-        <div className="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
-            <div>
-                <Link href="/">
-                    <ApplicationLogo className="w-20 h-20 fill-current text-gray-500" />
-                </Link>
-            </div>
-
-            <div className="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
-                {children}
-            </div>
-        </div>
+        <Container className="max-h-screen h-screen overflow-y-auto  max-w-[100vw] overflow-x-hidden" variant={"vcc"}>
+            <Container className='' variant={"vcc"} customElement={"main"}>{children}</Container>
+        </Container>
     );
 }

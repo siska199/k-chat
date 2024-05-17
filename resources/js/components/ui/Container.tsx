@@ -51,7 +51,7 @@ const containerFlexVariants = cva(
   
       },
       typeComp : {
-        'page' : 'min-h-screen ',
+        'page' : 'min-h-screen h-screen',
         'card' : 'p-4'
       }
     },

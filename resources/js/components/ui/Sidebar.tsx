@@ -11,7 +11,7 @@ const Sidebar = (props: TProps) => {
   
   return (
     <Container variant={"vcs"} fit typeComp={"card"} gap={"x-large"} className='h-full bg-white border-r' >
-      <Image src={"logo-k-chat.webp"} alt={"logo aplikasi"} className='w-[2rem] cursor-pointer-custome'/>
+      <Image src={"k-chat-logo.png"} alt={"logo aplikasi"} className='w-[3rem] cursor-pointer-custome'/>
       <Container customElement='ul' gap="base" className="">
         {
           listMenuSidebar?.map((data,i)=><li key={i} className={clsx({

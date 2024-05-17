@@ -19,10 +19,10 @@ const Files = (props: TProps) => {
         <Container customElement='ul' variant={"vss"} gap={"small"}>
         {
             listFile?.map((data,i)=>(
-                <Container variant={"hss"} gap={"base"} className='cursor-pointer-custome'>
+                <Container variant={"hss"} gap={"base"} className='cursor-pointer'>
                     <IconTypeFile type={data.type}/>
                     <Container className='gap-1'>
-                        <p className='font-medium'>{data.filename}</p>
+                        <p className='font-medium line-clamp-1 hover:line-clamp-none'>{data.filename}</p>
                         <p className='text-body-tiny text-gray'>{data.size} {data.date}</p>
                     </Container>
                 </Container>

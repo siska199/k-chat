@@ -45,6 +45,7 @@ export default {
             black : '#000000',
             white : '#FFFFFF',
             "broken-white" : '#F8F8FC',
+            disabled : "#e1e8ec",
             gray: {
                 '50' :'#F8FAFC',
                 '100':'#F1F5F9',
