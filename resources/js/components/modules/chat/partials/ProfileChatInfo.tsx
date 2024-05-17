@@ -9,7 +9,7 @@ const ProfileChatInfo = () => {
     <Container gap={"base"}>
       <Container variant={"vcc"} >
         <Avatar variant={"large"} src={avatar} alt="Picture"/>
-        <h3 className='text-center text-body-large font-bold'>Colombus Studio</h3>
+        <h3 className='text-center text-body-large font-medium'>Colombus Studio</h3>
         <p className='text-gray font-thin'>12 Member</p>
       </Container>
 

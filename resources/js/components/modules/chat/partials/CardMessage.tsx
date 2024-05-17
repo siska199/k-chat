@@ -27,16 +27,19 @@ const CardMessage = (props: TPropsCardMessage) => {
     })}>
       <Container variant={"hss"} gap={"small"}>
         <Avatar src={image} alt={"User"}/>
-        <Container variant={"vsc"}>
+        <Container variant={"vsc"} className=''>
           <p className='text-body-medium font-medium'>{name}</p>
-          {
-            isTyping ? 
-            <p className='italic text-success'>{name} is Typing...</p>
-            :
-            <p className='text-gray-400'>{latestMessage}</p>
-          }
+          <p className={clsx({
+            "text-base-tiny text-gray-400" : true,
+            "italic text-success" : isTyping
+          })}>
+            {
+              isTyping ? 
+              <>{name} is Typing...</> : <>{latestMessage}</>
+            }
+          </p>
         </Container>
-        <Container variant={"vec"} >
+        <Container variant={"vec"} fit className='min-w-[4rem]'>
           <p className={clsx({
             'text-body-base' : true
           })}>07.45 AM</p>

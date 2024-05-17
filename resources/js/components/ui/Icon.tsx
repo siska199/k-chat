@@ -20,6 +20,9 @@ export { default as IconClose } from '../../../assets/icons/close.svg?react';
 export { default as IconNote } from '../../../assets/icons/note.svg?react';
 export { default as IconCopy } from '../../../assets/icons/copy.svg?react';
 export { default as IconNotificationFill } from '../../../assets/icons/notification-fill.svg?react';
+export { default as IconMedia } from '../../../assets/icons/media.svg?react';
+export { default as IconFile } from '../../../assets/icons/file.svg?react';
+export { default as IconVideoPlay } from '../../../assets/icons/video-play.svg?react';
 
 
 

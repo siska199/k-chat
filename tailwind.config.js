@@ -13,7 +13,7 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                'poppins': ['Poppins'],
             },
         },
         fontSize:{
@@ -34,6 +34,7 @@ export default {
 
         },
         fontWeight:{
+            light       : 300,
             normal      : 400,
             medium      : 500,
             semibold    : 600,
@@ -58,17 +59,17 @@ export default {
                 DEFAULT : '#94A3B8'
             },
             primary : {
-                '50' :'#F4F4FF',
-                '100':'#E7E6FF',
-                '200':'#D0CCFF',
-                '300':'#A19AFF',
-                '400':'#7167FF',
-                '500':'#4235FF',
-                '600':'#1302FF',
-                '700':'#0F02CC',
-                '800':'#0B0199',
-                '900':'#080166',
-                DEFAULT :'#4235FF' ,
+                '50' :'#FDF2F8',
+                '100':'#FCE8F4',
+                '200':'#FBD0E8',
+                '300':'#F9A9D5',
+                '400':'##F471B5',
+                '500':'#EC4699',
+                '600':'#DB2979',
+                '700':'#BF185D',
+                '800':'#9B174C',
+                '900':'#811842',
+                DEFAULT :'#EC4699' ,
             },
             success : {
                 '50' :'#F0FDF4',
@@ -93,7 +94,8 @@ export default {
                 '600':'#D97706',
                 '700':'#B45309',
                 '800':'#92400E',
-                '900':'#78350F'
+                '900':'#78350F',
+                DEFAULT : '#F59E0B'
             },
             error:{
                 '50' :'#FEF2F2',
@@ -105,7 +107,8 @@ export default {
                 '600':'#DC2626',
                 '700':'#B91C1C',
                 '800':'#991B1B',
-                '900':'#7F1D1D'
+                '900':'#7F1D1D',
+                DEFAULT : '#EF4444'
             }
         },
         spacing : {

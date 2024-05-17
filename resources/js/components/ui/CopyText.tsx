@@ -38,7 +38,7 @@ const CopyText = (props: Props) => {
   return (
     <Container variant={variant||"hsc"} gap={"small"} className={`${classContainer}`}>
         <p className={classText}>{text}</p>
-        <IconCopy onClick={ handleCopyToClipboard} className={`${classIcon} w-[1rem] cursor-pointer-custome`}/>
+        <IconCopy onClick={ handleCopyToClipboard} className={`${classIcon} w-[1rem] cursor-pointer-custome icon-primary-fill`}/>
     </Container>
   )
 }

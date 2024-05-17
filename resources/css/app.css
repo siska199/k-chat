@@ -3,11 +3,53 @@
 @tailwind utilities;
 
 
-/* Global Style */
+@font-face {
+    font-family: 'Poppins';
+    src: url('../assets/fonts/Poppins-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../assets/fonts/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../assets/fonts/Poppins-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../assets/fonts/Poppins-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../assets/fonts/Poppins-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../assets/fonts/Poppins-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
 
 @layer base {
     *{
-        @apply m-0 p-0 box-border;
+        @apply font-poppins m-0 p-0 box-border ;
     }
     html{
         @apply scroll-smooth;
@@ -50,13 +92,23 @@
     }
 
     /* FOR SVG ICON set color dinamically */
-    .icon-white path { stroke: white;  }
-    .icon-white-fill path { fill: white;  }
+    .icon-white path { @apply stroke-white }
+    .icon-white-fill path { @apply fill-white  }
 
-    .icon-grey path { stroke: #94A3B8; }
-    .icon-red path { stroke: rgb(148, 53, 53); }
-    .icon-yellow path { stroke: rgb(218, 171, 84); }
-    .icon-green path { stroke: rgb(99, 145, 62); }
+    .icon-grey path { @apply stroke-gray }
+    .icon-grey-fill path { @apply fill-gray }
+
+    .icon-primary path { @apply stroke-primary }
+    .icon-primary-fill path { @apply fill-primary  }
+
+    .icon-error path { @apply stroke-error }
+    .icon-error-fill path {  @apply fill-error }
+
+    .icon-warning path { @apply stroke-warning}
+    .icon-warning-fill path { @apply fill-warning }
+
+    .icon-success path { @apply  stroke-success}
+    .icon-success-fill path { @apply  fill-success}
 
     /* Customize scrollbar */
     ::-webkit-scrollbar{

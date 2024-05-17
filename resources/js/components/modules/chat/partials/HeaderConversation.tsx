@@ -14,7 +14,7 @@ const HeaderConversation = ()=>{
         <Container variant={"hsc"} gap={"base"}>
           <Avatar onClik={()=>setShowProfileConversation(!isShowProfileConversation)} src={data.image} variant={"medium"} alt={"user"} className="cursor-pointer-custome"/>
           <Container>
-            <h4 className="text-body-large font-extrabold">Columbus Studio</h4>
+            <h4 className="text-body-large font-bold">Columbus Studio</h4>
             <p className="text-gray">12 Member, <span className="text-success">4 Online</span></p>
           </Container>
         </Container>

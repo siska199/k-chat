@@ -1,14 +1,17 @@
 import Container from '@/components/ui/Container'
-import HeaderConversation from './partials/HeaderConversation'
-import GroupConversationByDate from './partials/GroupConversationByDate'
-import InputBase from '@/components/ui/inputs/InputBase'
+import clsx from 'clsx'
 import FormConversation from './partials/FormConversation'
+import GroupConversationByDate from './partials/GroupConversationByDate'
+import HeaderConversation from './partials/HeaderConversation'
 
 type Props = {}
 
 const Conversation = (props: Props) => {
   return (
-    <Container  className='max-h-full h-full bg-broken-white'>
+    <Container className={clsx({
+      'max-h-full h-full bg-broken-white hidden md:flex' : true,
+      '' : true
+    })}>
       <HeaderConversation/>
       <Container className='bg-broken-white h-full overflow-y-auto'>
         <GroupConversationByDate/>

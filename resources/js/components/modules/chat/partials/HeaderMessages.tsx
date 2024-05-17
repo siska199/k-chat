@@ -10,7 +10,7 @@ const HeaderMessages = (props: Props) => {
 
   return (
     <Container typeComp={"card"} variant={"hbc"} className='pb-0' >
-        <h5 className='text-primary font-bold'>Messages</h5>
+        <h5 className='text-primary font-bold text-heading-05'>Chat 🗨️</h5>
         <Container variant={"hsc"} fit gap={"small"} >
             <IconSearch className='cursor-pointer-custome w-[1.25rem]'/>
             <IconEdit className='cursor-pointer-custome w-[1.25rem]'/>
