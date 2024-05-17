@@ -1,6 +1,6 @@
 import Conversation from '@/components/modules/chat/Conversation';
 import Messages from '@/components/modules/chat/Messages';
-import ProfileChat from '@/components/modules/chat/partials/ProfileChat';
+import ProfileChat from '@/components/modules/chat/ProfileChat';
 import Container from '@/components/ui/Container';
 import ProtectedLayout from '@/layouts/ProtectedLayout';
 

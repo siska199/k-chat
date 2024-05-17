@@ -58,7 +58,6 @@ export default {
                 DEFAULT : '#94A3B8'
             },
             primary : {
-                DEFAULT :'#4235FF' ,
                 '50' :'#F4F4FF',
                 '100':'#E7E6FF',
                 '200':'#D0CCFF',
@@ -68,7 +67,8 @@ export default {
                 '600':'#1302FF',
                 '700':'#0F02CC',
                 '800':'#0B0199',
-                '900':'#080166'
+                '900':'#080166',
+                DEFAULT :'#4235FF' ,
             },
             success : {
                 '50' :'#F0FDF4',
@@ -141,14 +141,14 @@ export default {
             '80'    : '20rem',
             '96'    : '24rem'
         },
-        borderColor: {
-            DEFAULT: '#E2E8F0',
-            input : '#D6D6D6',
-            primary : '#4235FF'
-        },
-        borderWidth: {
-            DEFAULT: '1px',
-        },
+        // borderColor: {
+        //     DEFAULT: '#E2E8F0',
+        //     input : '#D6D6D6',
+        //     primary : '#4235FF'
+        // },
+        // borderWidth: {
+        //     DEFAULT: '1px',
+        // },
 
     },
 

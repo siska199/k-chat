@@ -7,7 +7,7 @@ const containerFlexVariants = cva(
   {
     variants : {
       variant : {
-        "large"   : 'min-w-[4rem] h-[4rem]',
+        "large"   : 'min-w-[5rem] h-[5rem]',
         "medium"  : 'min-w-[3.5rem] h-[3.5rem]',
         "base"    : 'min-w-[3rem] h-[3rem]',
         'small'   : 'min-w-[1.5rem] h-[1.5rem]'

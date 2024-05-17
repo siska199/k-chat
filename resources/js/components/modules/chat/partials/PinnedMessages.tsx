@@ -11,7 +11,7 @@ const PinnedMessages = (props: TProps) => {
         <IconPin className=''/>
         <p className='text-gray'>Pinned Message</p>
       </Container>
-      <Container customElement='ul'  className=' overflow-x-hidden max-h-[10rem] '  >
+      <Container customElement='ul'  className=' overflow-x-hidden h-[10rem]'  >
         {
           listPinnedMessage?.map((data,i)=>
             <CardMessage key={i} {...data} className={" p-4 "}/>

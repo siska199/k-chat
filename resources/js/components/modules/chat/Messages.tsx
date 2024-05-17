@@ -7,9 +7,9 @@ import PinnedMessages from './partials/PinnedMessages'
 const Messages = () => {
 
   return (
-   <Container  fit gap={"medium"} className='max-h-full max-w-[21rem] w-[21rem] h-full md:flex border-r '>
-      <HeaderMessages/>
-      <OnlineFiends/>
+   <Container  fit gap={"medium"} className='max-h-full h-full max-w-[21rem] w-[21rem] md:flex border-r'>
+      <HeaderMessages/> 
+      <OnlineFiends/> 
       <PinnedMessages/>
       <AllMessage/>
    </Container>

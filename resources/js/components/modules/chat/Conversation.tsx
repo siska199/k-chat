@@ -10,7 +10,7 @@ const Conversation = (props: Props) => {
   return (
     <Container  className='max-h-full h-full bg-broken-white'>
       <HeaderConversation/>
-      <Container className='bg-broken-white h-full overflow-y-auto '  >
+      <Container className='bg-broken-white h-full overflow-y-auto'>
         <GroupConversationByDate/>
         <GroupConversationByDate/>
         <GroupConversationByDate/>
