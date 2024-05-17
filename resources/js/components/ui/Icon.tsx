@@ -19,6 +19,7 @@ export { default as IconSend } from '../../../assets/icons/send.svg?react';
 export { default as IconClose } from '../../../assets/icons/close.svg?react';
 export { default as IconNote } from '../../../assets/icons/note.svg?react';
 export { default as IconCopy } from '../../../assets/icons/copy.svg?react';
+export { default as IconNotificationFill } from '../../../assets/icons/notification-fill.svg?react';
 
 
 
