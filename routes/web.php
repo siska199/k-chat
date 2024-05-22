@@ -12,11 +12,10 @@ use Inertia\Inertia;
 
 // NON-AUTH ROUTE
 Route::group([
-    // 'middleware'=>['auth', 'verified']
 ],function(){
     Route::get('/',[HomeController::class,'home'])->name('home');
-    Route::get('/login-test', function () {
-        return inertia('LoginTest'); 
+    Route::get('/auth/login', function () {
+        return inertia('Login'); 
     })->name('login');
 });
 
