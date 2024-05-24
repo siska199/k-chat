@@ -7,10 +7,10 @@ export default function Login() {
 
     return (
     <Container typeComp={"page"} className='' variant={"hsc"}>
-        <div className='flex-[0.75] h-full w-full'>
+        <div className='hidden md:flex flex-[0.75] h-full w-full'>
           <Image src={"login-image.jpg"} className='w-full h-full object-cover'/>
         </div>
-        <FormLogin/>
+        <FormLogin className='bg-white  md:flex-[0.25] ml-auto'/>
       </Container>
     );
 }

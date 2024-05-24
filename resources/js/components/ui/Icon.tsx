@@ -23,6 +23,8 @@ export { default as IconNotificationFill } from '../../../assets/icons/notificat
 export { default as IconMedia } from '../../../assets/icons/media.svg?react';
 export { default as IconFile } from '../../../assets/icons/file.svg?react';
 export { default as IconVideoPlay } from '../../../assets/icons/video-play.svg?react';
+export { default as IconEye } from '../../../assets/icons/eye.svg?react';
+export { default as IconCloseEye } from '../../../assets/icons/close-eye.svg?react';
 
 
 

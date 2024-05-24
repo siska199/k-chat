@@ -15,7 +15,7 @@ Route::group([
 ],function(){
     Route::get('/',[HomeController::class,'home'])->name('home');
     Route::get('/auth/login', function () {
-        return inertia('Login'); 
+        return inertia('Auth/Login'); 
     })->name('login');
 });
 

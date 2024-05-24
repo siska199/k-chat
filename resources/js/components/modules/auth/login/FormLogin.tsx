@@ -8,7 +8,7 @@ import { useForm } from '@inertiajs/react'
 import { FormEventHandler, useEffect } from 'react'
 
 interface TProps {
-
+    className? : string;
 }
 
 interface TFormData {
@@ -18,7 +18,7 @@ interface TFormData {
 }
 
 const FormLogin = (props: TProps) => {
-
+    const {className} = props
     const { data, setData, post, processing, errors, reset } = useForm<TFormData>({
         email: '',
         password: '',
@@ -40,19 +40,19 @@ const FormLogin = (props: TProps) => {
         post(route('login'));
     };
 
-
+    console.log("errors: ", errors)
   return (
-    <Container variant={"vcc"} padding={"large"} gap={"large"} className=' bg-white  flex-[0.25] ml-auto  '>
+    <Container variant={"vcc"} padding={"large"} gap={"large"} className={`${className}  `}>
         <div className='flex items-center flex-col'>
             <Image src={"k-chat-logo.png"} alt={"logo aplikasi"} className='w-[6rem] cursor-pointer-custome'/>
             <h5 className='text-heading-05 font-medium text-center mt-4'>Welcome back!</h5>
             <p className='text-center text-gray'>Please enter your credentail to sign in.</p>
         </div>
         <Container customElement='form' gap={"base"} className='w-full'>
-            <InputBase onChange={handleOnChange} label={"Username"} placeholder='Enter your username'/>
-            <InputBase onChange={handleOnChange} label={"Password"} type="password" placeholder='Enter your username'/>
-            <Container variant={"hbc"}>
-                <InputCheckbox vertical={false} label='Remember' />
+            <InputBase onChange={handleOnChange} name={"email"} label={"Username"} placeholder='Enter your password' errorMessage={errors.email}/>
+            <InputBase onChange={handleOnChange} name="password" label={"Password"} type="password" placeholder='Enter your username' errorMessage={errors.password}/>
+            <Container variant={"hbc"} gap={"small"}>
+                <InputCheckbox vertical={false} name={"remember"} label='Remember' />
                 <Link href={'/remember-me'}>Forgot Password?</Link>
             </Container>
         </Container>
